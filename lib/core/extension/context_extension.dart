@@ -21,6 +21,7 @@ extension MediaQueryExtension on BuildContext {
 
   //kayit için ekstra
   double get loginLalue1 => width * 0.8;
+  double get keyboardHeight => mediaQuery.viewInsets.bottom;
 }
 ////burda mediaquerye gore response tasarım için ekran genisligi ve uykseklige paz alarak kendin deger verirsen kulanırsın
 
@@ -48,6 +49,7 @@ extension PaddingExtensionAll on BuildContext {
 
 extension PaddingExtensionSymetric on BuildContext {
   EdgeInsets get paddingLowVertical => EdgeInsets.symmetric(vertical: lowValue);
+  EdgeInsets get paddingLowVerticalPlus => EdgeInsets.symmetric(vertical: lowValuePlus);
   EdgeInsets get paddingNormalVertical => EdgeInsets.symmetric(vertical: normalValue);
   EdgeInsets get paddingMediumVertical => EdgeInsets.symmetric(vertical: mediumValue);
   EdgeInsets get paddingHighVertical => EdgeInsets.symmetric(vertical: highValue);

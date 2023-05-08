@@ -7,7 +7,7 @@ class ImageConstant {
 
   ImageConstant._init();
   final apple = "apple".toPng;
-  final flowers = "flowers".toPng;
+  final flower = "flowers".toPng;
   final cupcake = "cupcake".toPng;
   final chicken = "chicken".toPng;
 }

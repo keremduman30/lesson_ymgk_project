@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:ymgk_project/core/extension/context_extension.dart';
-
-import '../../../core/constant/app/image_constant.dart';
+import 'package:ymgk_project/view/home/view_model/home_view_model.dart';
+import 'package:ymgk_project/view/home/widget/card_row_icon_widget.dart';
 
 class HomeCardWidget extends StatelessWidget {
   const HomeCardWidget({super.key});
@@ -10,22 +11,22 @@ class HomeCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      width: context.dymaicWidth(0.75),
+      // width: context.dymaicWidth(0.90),
       // width: 290,
-      child: Column(
-        children: [
-          SizedBox(
-            height: context.dymaicWidth(0.45),
-            // height: 170,
-            child: buildStackHead(context),
-          ),
-          buildDivider(context),
-          buildFirstRow(context),
-          buildDivider(context)
-        ],
-      ),
+      child: context.watch<HomeViewModel>().loadig
+          ? loadigProgress()
+          : Column(
+              children: [
+                SizedBox(height: context.dymaicWidth(0.55), child: buildStackHead(context)),
+                buildDivider(context),
+                buildResultList(),
+                buildDivider(context)
+              ],
+            ),
     );
   }
+
+  Widget loadigProgress() => const Center(child: CircularProgressIndicator());
 
   Widget buildStackHead(BuildContext context) {
     return Stack(
@@ -34,11 +35,12 @@ class HomeCardWidget extends StatelessWidget {
   }
 
   Widget stackColumn(BuildContext context) {
-    return Column(
-      children: [
-        buildFirstRow(context),
-        buildFirstRow(context),
-      ],
+    return Consumer<HomeViewModel>(
+      builder: (context, model, child) {
+        return Column(
+          children: [buildTopList(model), buildBottomList(model)],
+        );
+      },
     );
   }
 
@@ -46,10 +48,7 @@ class HomeCardWidget extends StatelessWidget {
     return const Positioned(
       left: 5,
       bottom: 0,
-      child: SizedBox(
-        width: 15,
-        child: Divider(thickness: 2.5, height: 70, color: Colors.black),
-      ),
+      child: SizedBox(width: 15, child: Divider(thickness: 2.5, height: 70, color: Colors.black)),
     );
   }
 
@@ -60,29 +59,19 @@ class HomeCardWidget extends StatelessWidget {
     );
   }
 
-  Widget buildFirstRow(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: context.lowValuePlus),
-      child: SizedBox(
-        height: context.dymaicWidth(0.15),
-        width: double.infinity,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            buildFirstRowItems(ImageConstant.instance.flowers),
-            buildFirstRowItems(ImageConstant.instance.apple),
-            buildFirstRowItems(ImageConstant.instance.cupcake),
-            buildFirstRowItems(ImageConstant.instance.chicken),
-          ],
-        ),
-      ),
-    );
+  Widget buildTopList(HomeViewModel model) {
+    return CardRowIconWidget(list: model.topListImages);
   }
 
-  Widget buildFirstRowItems(String path) {
-    return Container(
-      width: 45,
-      decoration: BoxDecoration(image: DecorationImage(image: AssetImage(path), fit: BoxFit.fitWidth)),
+  Widget buildBottomList(HomeViewModel model) {
+    return CardRowIconWidget(list: model.bottomListImages);
+  }
+
+  Widget buildResultList() {
+    return Consumer<HomeViewModel>(
+      builder: (context, model, child) {
+        return CardRowIconWidget(list: model.resultListImages);
+      },
     );
   }
 }
