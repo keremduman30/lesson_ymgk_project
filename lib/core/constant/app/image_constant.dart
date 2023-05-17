@@ -10,6 +10,7 @@ class ImageConstant {
   final flower = "flowers".toPng;
   final cupcake = "cupcake".toPng;
   final chicken = "chicken".toPng;
+  final logo = "logo".toPng;
 }
 
 extension _ImagePathExtension on String {

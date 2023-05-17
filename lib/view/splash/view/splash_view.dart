@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ymgk_project/core/extension/context_extension.dart';
 
 import '../../../core/base/view/base_view.dart';
 import '../../../core/constant/app/lottie_constant.dart';
@@ -17,14 +18,13 @@ class SplashView extends StatelessWidget {
       },
       onPageBuilder: (BuildContext context, SplashViewModel viewModel) => Scaffold(
         body: Center(
-          child: Row(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              buildRowItem(LottiePathEnum.number1),
-              buildRowItem(LottiePathEnum.number2),
-              buildRowItem(LottiePathEnum.number3),
-              buildRowItem(LottiePathEnum.number4),
+              buildRow(context),
+              const SizedBox(height: 30),
+              const Center(child: CircularProgressIndicator(strokeWidth: 7)),
             ],
           ),
         ),
@@ -32,11 +32,23 @@ class SplashView extends StatelessWidget {
     );
   }
 
-  SizedBox buildRowItem(LottiePathEnum path) {
-    return SizedBox(
-      width: 80,
-      height: 80,
-      child: path.toWidgetLottieCover,
+  Widget buildRow(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        rowItems(context, "1", Colors.blue),
+        rowItems(context, "2", Colors.purple),
+        rowItems(context, "3", Colors.orange),
+        rowItems(context, "4", Colors.blueGrey),
+      ],
+    );
+  }
+
+  Widget rowItems(BuildContext context, String text, Color colors) {
+    return Text(
+      text,
+      style: context.textThem.titleLarge?.copyWith(fontSize: 100, color: colors),
     );
   }
 }
