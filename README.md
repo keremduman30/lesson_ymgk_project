@@ -30,9 +30,7 @@ Bu komut, Flutter'ın kurulumunu doğrular ve gerekli bağımlılıkların doğr
 
 3.Adım- Proje deposunu yerel makinenize klonlayın. Bunun için terminalde aşağıdaki komutu kullanabilirsiniz:
 
-`git clone https://github.com/kullaniciadi/lesson_ymgk_project.git`
-
-kullaniciadi yerine GitHub kullanıcı adınızı, lesson_ymgk_project ise repo adınızı belirtmelisiniz.
+`git clone https://github.com/keremduman30/lesson_ymgk_project.git`
 
 4.Adım- Terminalde proje dizinine gidin:
 
@@ -63,12 +61,12 @@ Uygulama, 1234 rakamlarını temsil eden görsellerle çıkarma işlemi yapar ve
 
 ## Proje Videosu
 
-Projeyi indirmeden önce videosunu izleyebilirsiniz.
-[![Uygulama videosu](https://drive.google.com/file/d/1XAVMoCa7R6c6sPa0zMuzQRDRxHhHokfl/view?usp=sharing)](https://drive.google.com/file/d/1ub8mAbAaHOyJkLyk1CxNM98fUmm5lkPD/view?usp=sharing)
+Projeyi indirmeden önce videosunu izleyebilirsiniz.<br>
+[![Uygulama videosu]()](https://drive.google.com/file/d/1ub8mAbAaHOyJkLyk1CxNM98fUmm5lkPD/view?usp=sharing)
 
 
 ## Proje Apk Dosyası
 
-Proje apk dosyası
+Proje apk dosyası<br>
 [![Uygulama apk]()](https://drive.google.com/file/d/170oarnVwapswEZOMmFfqd2f0RryLTpoW/view?usp=sharing)
 
