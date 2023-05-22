@@ -1,6 +1,7 @@
 # lesson_ymgk_project
 
-lesson_ymgk_project, Bu proje, 1234 rakamlarını temsil eden resimlerle çıkarma işlemi yapan ve kullanıcıdan sonucu tahmin etmesini isteyen bir mobil uygulamanın kaynak kodlarını içermektedir.
+lesson_ymgk_project, Bu proje  Fırat Üniversitesi Yazılım Mühendisliği Güncel Konular dersinin vize proje ödevidir.
+Uygulama 1234 rakamlarını temsil eden resimlerle çıkarma işlemi yapan ve kullanıcıdan sonucu tahmin etmesini isteyen bir mobil uygulamanın kaynak kodlarını içermektedir.
 
 
 
@@ -62,11 +63,11 @@ Uygulama, 1234 rakamlarını temsil eden görsellerle çıkarma işlemi yapar ve
 ## Proje Videosu
 
 Projeyi indirmeden önce videosunu izleyebilirsiniz.<br>
-[![Uygulama videosu]()](https://drive.google.com/file/d/1ub8mAbAaHOyJkLyk1CxNM98fUmm5lkPD/view?usp=sharing)
+<a href="https://drive.google.com/file/d/1ub8mAbAaHOyJkLyk1CxNM98fUmm5lkPD/view?usp=sharing" target="_blank" onclick="window.open('https://drive.google.com/file/d/1ub8mAbAaHOyJkLyk1CxNM98fUmm5lkPD/view?usp=sharing'); return false;">Video için tıklayın</a> 
 
 
 ## Proje Apk Dosyası
 
 Proje apk dosyası<br>
-[![Uygulama apk]()](https://drive.google.com/file/d/170oarnVwapswEZOMmFfqd2f0RryLTpoW/view?usp=sharing)
+<a href="https://drive.google.com/file/d/170oarnVwapswEZOMmFfqd2f0RryLTpoW/view?usp=sharing" target="_blank" onclick="window.open('https://drive.google.com/file/d/170oarnVwapswEZOMmFfqd2f0RryLTpoW/view?usp=sharing'); return false;">Apk dosyasını indirmek için tıklayın</a>
 
